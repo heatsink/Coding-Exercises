@@ -1,3 +1,8 @@
+/**
+ * A Simple Stack Class
+ * @author Sean Wallace
+ * @version Lab 2
+ */
 import java.lang.Exception;
 public class MyStack{
    private int nodesLeft;
