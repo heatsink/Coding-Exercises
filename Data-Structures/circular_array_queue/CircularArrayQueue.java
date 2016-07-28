@@ -1,3 +1,8 @@
+/**
+ * A simple circular queue implemented using an array
+ * @author Sean Wallace
+ * @version Lab 2
+ */
 import java.util.Collection;
 import java.lang.Exception;
 public class CircularArrayQueue<T> implements QueueADT<T> {
@@ -35,8 +40,5 @@ public class CircularArrayQueue<T> implements QueueADT<T> {
    }
    public int size() {
       return queue.length;
-   }
-   public void expandCapacity() {
-      
    }
 }

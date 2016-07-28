@@ -12,12 +12,10 @@ public class MyStack{
       top = newNode;
    }
    public int pop() {
-      // Is the stack empty?
       if (empty()) {
          throw new NullPointerException();
       }
       int stored = top.data;
-      // Remove top
       top = top.next;
       return stored;
    }
@@ -30,7 +28,6 @@ public class MyStack{
       }
       return false;
    }
-   // Don't worry about full right now
    public boolean full() {
       if (nodesLeft > 0) {
          return true;

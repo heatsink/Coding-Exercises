@@ -44,7 +44,6 @@ public class MyQueue<T> {
       return queue[front];
    }
    public boolean isEmpty() {
-      //if (rear == (front - 1)%queue.length) {
       if (size == 0) {
          return true;
       }
