@@ -8,11 +8,29 @@
  * @version 1
  */
 #include <stdio.h>
-
+#define TABSTOP 4
 /**
  * This is the main method.
  */
 int main() {
-    
+    int cur;
+    int count;
+    count = 0;
+    int i;
+    while ((cur=getchar()) != EOF && cur != '\0') {
+        if (cur == ' ') {
+            count++;
+        }
+        else {
+            for (i = 0; i < count; i++) {
+                putchar(' ');
+            }
+            putchar(cur);
+        }
+        if (count == TABSTOP) {
+            count = 0;
+            putchar('\t');
+        }
+    }
     return 0;
 }
