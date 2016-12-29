@@ -49,6 +49,7 @@ int htoi(char arr[]) {
         }
         else {
             printf("ERR: NAN.\n");
+            break;
         }
         n += temp*(power16(digit));
         digit++;
