@@ -18,29 +18,53 @@ void real(char s[], char t[]); // Copies escape sequences into real chars
  */
 int main() {
     // Get Input
+    char input[STRLEN];
+    char output[STRLEN];
+    int index;
+    int cur;
+    while ((cur = getchar()) != EOF && cur != '\0') {
+        // Wait for new line
+        input[index++] = cur;
+        if (cur == '\n') {
+            input[index++] = cur;
+            escape(output, input);
+            printf("%s\n", output);
+            input[index] = '\0';
+            index = 0;
+        }
+    }
     // Output characters like newline and tab into visible esc. seq. \n, \t, etc.
     return 0;
 }
 void escape(char s[], char t[]) { // Copies good t to s
-    int i;
+    int i = 0;
+    int j = 0;
     char temp;
     for (i = 0; i < strlen(t) - 1; i++) {
         temp = t[i];
         switch (temp) {
             case '\t':
-                s[i++] = '\\';
-                s[i] = 't';
+                s[j++] = '\\';
+                s[j] = 't';
+                break;
             case '\b':
-                s[i++] = '\\';
-                s[i] = 'b';
+                s[j++] = '\\';
+                s[j] = 'b';
+                break;
             case '\n':
-                s[i++] = '\\';
-                s[i] = 'n';
+                s[j++] = '\\';
+                s[j] = 'n';
+                break;
+            case '\r':
+                s[j++] = '\\';
+                s[j] = 'r';
             default: 
-                s[i] = temp;
+                s[j] = temp;
                 break;
         }
+        j++;
     }
+    s[j] = '\0';
 }
 void real(char s[], char t[]) { // Copies good t to s
 }
