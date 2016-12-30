@@ -21,41 +21,46 @@ void removeCharacter(char s1[], int index);
  * This is the main method.
  */
 int main() {
-    char s1[] = "abcdefgh";
-    char s2[] = "def";
+    char s1[9] = "abcdefgh";
+    char s2[4] = "def";
     char c = 'd';
     testContains("abcdefgh", 'c');
     testContains("abcdefgh", 'x');
     testContains("abcdefgh", '\0');
-    testSqueeze("abcdefgh", "def", "abcgh");
+    testSqueeze(s1, s2, "abcgh");
+    char s3[] = "12345678901234567890";
+    char s4[] = "0";
+    testSqueeze(s3, s4, "123456789123456789");
 }
 
 void squeeze(char s1[], char s2[]) {
-    char final[strlen(s1)];
     int i;
     int j;
     int k;
     i=j=k=0;
+    char temp[strlen(s1)];
     while (s1[i] != '\0') {
         if (!contains(s2, s1[i])) {
-            final[j] = s1[i];
-            j++;
+            temp[j++] = s1[i];
         }
         i++;
     }
-    // make s1 = final
-    strcpy(s1, final);
+    temp[j] = '\0';
+    for (i = 0; i < strlen(temp); i++) {
+        s1[i] = temp[i];
+    }
+    s1[i] = '\0';
+
 }
 
 void testSqueeze(char s1[], char s2[], char expect[]) {
+    printf("Squeeze test-- %s, %s\n", s1, s2);
     squeeze(s1, s2);
-    if (strcmp(s1, expect)) {
-        printf("Squeeze test-- %s, %s --> %s -- Test Successful!\n", 
-                s1, s2, expect);
+    if (!strcmp(s1, expect)) { // If they are equal == 0
+        printf("\t-->%s (cmp) %s-- Test Successful!\n", s1, expect);
     }
     else {
-        printf("Squeeze test-- %s, %s --> %s -- Test Successful!\n", 
-                s1, s2, expect);
+        printf("\t-->%s (cmp) %s-- Test unsuccessful.\n", s1, expect);
     }
 
 }
