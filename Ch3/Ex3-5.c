@@ -69,6 +69,7 @@ void itob(int n, char s[], int b) {
         n/=b;
         i++;
     }
+    // Reverse the string using XOR magic :D
     int j = 0;
     for (j = 0, i--; j < i; i--, j++) {
         s[j] ^= s[i];
