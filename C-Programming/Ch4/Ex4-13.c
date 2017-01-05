@@ -1,4 +1,5 @@
 /**
+ * Fulfils exercise 4-13.
  * This program reverses a string recursively.
  * @author Sean Wallace
  * @version 1
