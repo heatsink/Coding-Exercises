@@ -40,9 +40,9 @@ int main() {
 }
 int binarySearch(int arr[], int search, int size) 
 {
-    int min = 0;
-    int max = size - 1; // Arrays are 0 indexed
-    int center;
+    register int min = 0;
+    register int max = size - 1; // Arrays are 0 indexed
+    register int center;
     while (min <= max) {
         center = (min + max)/2;
         // Less?
