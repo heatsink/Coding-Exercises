@@ -20,9 +20,19 @@ int main() {
 /*
  * Copies the contents of s2 into s1
  */
+/*
 void stringcpy(char *s1, char *s2) {
     while ((*s1 = *s2)!= '\0') {
         s1++;
         s2++;
     }
+}
+*/
+
+/*
+ * Because now the book showed me the cool version. :D.
+ */
+void stringcpy(char *s1, char *s2) {
+    while ((*s1++ = *s2++)) // Because here while still checks for !=0 inherently
+        ;
 }
