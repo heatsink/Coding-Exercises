@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CAPACITY	Queue/queue.c	/^#define CAPACITY /;"	d	file:
+CHARSET	uniqueChar.c	/^#define CHARSET /;"	d	file:
+MAXLEN	Ex4-1.c	/^#define MAXLEN /;"	d	file:
+STACKLEN	Stack/stack.c	/^#define STACKLEN /;"	d	file:
+back	Queue/queue.c	/^int back = -1;$/;"	v
+bool	Ex4-13.c	/^enum bool { false, true };$/;"	g	file:
+bool	Ex4-13.c	/^typedef int bool;$/;"	t	file:
+bool	uniqueChar.c	/^enum bool { false, true };$/;"	g	file:
+bool	uniqueChar.c	/^typedef int bool;$/;"	t	file:
+count	Queue/queue.c	/^int count = 0;$/;"	v
+dequeue	Queue/queue.c	/^int dequeue(void) {$/;"	f
+dtoch	dtoch.c	/^void dtoch(int integer) {$/;"	f
+enqueue	Queue/queue.c	/^void enqueue(int item) {$/;"	f
+false	Ex4-13.c	/^enum bool { false, true };$/;"	e	enum:bool	file:
+false	uniqueChar.c	/^enum bool { false, true };$/;"	e	enum:bool	file:
+front	Queue/queue.c	/^int front = -1;$/;"	v
+itoa	Ex4-12.c	/^void itoa(int number) {$/;"	f
+main	Ex4-1.c	/^int main() {$/;"	f
+main	Ex4-12.c	/^int main() {$/;"	f
+main	Ex4-13.c	/^int main() {$/;"	f
+main	Ex4-14.c	/^int main() {$/;"	f
+main	Queue/queuetest.c	/^int main() {$/;"	f
+main	Stack/stackTest.c	/^int main() {$/;"	f
+main	dtoch.c	/^int main() {$/;"	f
+main	macro.c	/^int main() {$/;"	f
+main	quicksort.c	/^int main() {$/;"	f
+main	uniqueChar.c	/^int main() {$/;"	f
+newLine	dtoch.c	/^void newLine(void) {$/;"	f
+pop	Stack/stack.c	/^int pop(void) {$/;"	f
+push	Stack/stack.c	/^void push(char item) {$/;"	f
+queue	Queue/queue.c	/^int queue[CAPACITY];$/;"	v
+quicksort	quicksort.c	/^void quicksort(int arr[], int sIndex, int eIndex) {$/;"	f
+reverse	Ex4-13.c	/^void reverse(char string[], int index) {$/;"	f
+square	macro.c	/^#define square(/;"	d	file:
+stack	Stack/stack.c	/^char stack[STACKLEN];$/;"	v
+stackPointer	Stack/stack.c	/^int stackPointer = 0;$/;"	v
+strindex	Ex4-1.c	/^int strindex(char s[], char t[]) {$/;"	f
+stringUnique	uniqueChar.c	/^bool stringUnique(char string[]) {$/;"	f
+swap	Ex4-14.c	/^#define swap(/;"	d	file:
+swap	quicksort.c	/^void swap(int arr[], int a, int b) {$/;"	f
+testFunct	uniqueChar.c	/^void testFunct(char string[]) {$/;"	f
+testReverse	Ex4-13.c	/^void testReverse(char a[], char b[]) {$/;"	f
+top	Stack/stack.c	/^int top(void) {$/;"	f
+true	Ex4-13.c	/^enum bool { false, true };$/;"	e	enum:bool	file:
+true	uniqueChar.c	/^enum bool { false, true };$/;"	e	enum:bool	file:
